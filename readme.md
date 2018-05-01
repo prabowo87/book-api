@@ -1,7 +1,7 @@
 # Book API with Laravel
 
 ## Extra
-I add upload files to this API.
+I add upload files to this API. I also add Book API postman collection, please check.
 
 ### Configuration upload files
 1. ```config/filesystems.php``` check the lines of code:
