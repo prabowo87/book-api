@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "cc3f695f-195b-4108-af4f-13246703fc30",
+		"name": "BOOK API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List of books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://book-api.test/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"book-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Enctype",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Buku Kue Pancong",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://book-api.test/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"book-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Enctype",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Buku CodePolitan",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://book-api.test/api/v1/books/1",
+					"protocol": "http",
+					"host": [
+						"book-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
